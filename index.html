@@ -1,107 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>云音乐播放器</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <!-- 头部 -->
-        <header class="header">
-            <div class="logo">
-                <i class="fas fa-music"></i>
-                <h1>云音乐</h1>
-            </div>
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="搜索音乐...">
-                <i class="fas fa-search"></i>
-            </div>
-        </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>云音乐 - 本地播放</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>云音乐 - 本地播放列表</h1>
+      <div id="status-msg" aria-live="polite" role="status" class="status-hidden"></div>
 
-        <!-- 主要内容区域 -->
-        <main class="main-content">
-            <!-- 侧边栏 -->
-            <aside class="sidebar">
-                <div class="playlist-section">
-                    <h3><i class="fas fa-list"></i> 播放列表</h3>
-                    <div class="playlist-controls">
-                        <button id="refreshBtn" class="btn-refresh">
-                            <i class="fas fa-sync-alt"></i> 刷新音乐
-                        </button>
-                    </div>
-                    <ul id="playlist" class="playlist">
-                        <!-- 音乐列表将在这里动态生成 -->
-                    </ul>
-                </div>
-            </aside>
-
-            <!-- 音乐播放区域 -->
-            <section class="player-section">
-                <div class="now-playing">
-                    <div class="album-art">
-                        <div class="art-placeholder">
-                            <i class="fas fa-music"></i>
-                        </div>
-                    </div>
-                    <div class="track-info">
-                        <h2 id="currentTrack">选择一首音乐开始播放</h2>
-                        <p id="currentArtist">云音乐播放器</p>
-                    </div>
-                </div>
-
-                <!-- 播放控制 -->
-                <div class="player-controls">
-                    <div class="progress-container">
-                        <div class="progress-bar">
-                            <div id="progress" class="progress"></div>
-                        </div>
-                        <div class="time-display">
-                            <span id="currentTime">0:00</span>
-                            <span id="duration">0:00</span>
-                        </div>
-                    </div>
-
-                    <div class="control-buttons">
-                        <button id="prevBtn" class="control-btn">
-                            <i class="fas fa-step-backward"></i>
-                        </button>
-                        <button id="playPauseBtn" class="control-btn play-btn">
-                            <i class="fas fa-play"></i>
-                        </button>
-                        <button id="nextBtn" class="control-btn">
-                            <i class="fas fa-step-forward"></i>
-                        </button>
-                        <button id="loopBtn" class="control-btn" title="循环播放">
-                            <i class="fas fa-redo"></i>
-                        </button>
-                        <button id="shuffleBtn" class="control-btn" title="随机播放">
-                            <i class="fas fa-random"></i>
-                        </button>
-                    </div>
-
-                    <div class="volume-control">
-                        <i class="fas fa-volume-up"></i>
-                        <input type="range" id="volumeSlider" min="0" max="100" value="70">
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- 音频元素 -->
-        <audio id="audioPlayer" preload="metadata"></audio>
-
-        <!-- 加载提示 -->
-        <div id="loadingOverlay" class="loading-overlay">
-            <div class="loading-spinner">
-                <i class="fas fa-spinner fa-spin"></i>
-                <p>正在加载音乐...</p>
-            </div>
+      <section class="player">
+        <div class="track-info">
+          <div id="track-title">未选择曲目</div>
+          <div id="track-time">00:00 / 00:00</div>
         </div>
-    </div>
 
-    <script src="script.js"></script>
-</body>
+        <audio id="audio" preload="metadata"></audio>
+
+        <div class="controls">
+          <button id="prev" title="上一首">⏮</button>
+          <button id="play" title="播放/暂停">▶️</button>
+          <button id="next" title="下一首">⏭</button>
+          <button id="loop" title="播放列表循环">🔁</button>
+        </div>
+
+        <input id="progress" type="range" min="0" max="100" value="0" />
+      </section>
+
+      <section class="playlist">
+        <h2>播放列表</h2>
+        <ul id="playlist-list"></ul>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
 </html>
