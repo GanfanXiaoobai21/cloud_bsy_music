@@ -223,3 +223,5 @@ audio.loop = !!loopSingle;
 if (tracks.length) loadTrack(0);
 // 页面提示当前循环状态（第一次加载）
 showStatus(loopSingle ? '默认：单曲循环已开启' : '默认：单曲循环已关闭', 1400);
+
+
