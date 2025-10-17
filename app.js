@@ -41,6 +41,8 @@ const tracks = [
   '错位时空.m4a',
   '难却.m4a',
   '风的使命.m4a',
+  '起风了跑步版.m4a',
+  '牵丝戏降调版.m4a'
 ];
 
 const audio = document.getElementById('audio');
