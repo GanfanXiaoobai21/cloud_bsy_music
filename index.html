@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Fullscreen background video (looping, muted). Place `background.mp4` and `background.jpg` in the project root. -->
+    <video id="bg-video" autoplay loop muted playsinline poster="background.jpg" aria-hidden="true">
+      <source src="background.mp4" type="video/mp4" />
+      <!-- Browser will fall back to the poster image if video is unavailable -->
+    </video>
     <main class="container">
       <h1>云音乐 - 本地播放列表</h1>
       <div id="status-msg" aria-live="polite" role="status" class="status-hidden"></div>

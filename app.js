@@ -223,7 +223,6 @@ loopBtn.setAttribute('aria-pressed', loopSingle ? 'true' : 'false');
 // 将 audio.loop 初始为 loopSingle
 audio.loop = !!loopSingle;
 if (tracks.length) loadTrack(0);
-// 页面提示当前循环状态（第一次加载）
-showStatus(loopSingle ? '默认：单曲循环已开启' : '默认：单曲循环已关闭', 1400);
+// 页面提示当前循环状态（第一次加载）- 已移除自动显示
 
 
