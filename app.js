@@ -5,7 +5,6 @@ const tracks = [
   'Nijamena.m4a',
   'scarbor.m4a',
   'victory.m4a',
-  '一笑江湖.m4a',
   '不为谁而作的歌.m4a',
   '冬眠.m4a',
   '别让爱凋落.m4a',
@@ -21,7 +20,6 @@ const tracks = [
   '孤城.m4a',
   '忘川彼岸.m4a',
   '折风渡夜.m4a',
-  '日不落-蔡依林.m4a',
   '星辰万里只有你.m4a',
   '晚风作酒.m4a',
   '晚风作酒黄静美.m4a',
@@ -44,6 +42,9 @@ const tracks = [
   '起风了跑步版.m4a',
   '牵丝戏降调版.m4a',
   '关山酒草帽酱.m4a',
+  '一笑江湖煽情版.m4a',
+  '室内系的trackmaker.m4a',
+  '一笑江湖老生.m4a',
 ];
 
 const audio = document.getElementById('audio');
