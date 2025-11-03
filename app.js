@@ -16,7 +16,6 @@ const tracks = [
   '大雨还在下.m4a',
   '天下低音版.m4a',
   '天下煽情版.m4a',
-  '孤城.m4a',
   '星辰万里只有你.m4a',
   '晚风作酒.m4a',
   '晚风作酒黄静美.m4a',
@@ -39,6 +38,7 @@ const tracks = [
   '一笑江湖煽情版.m4a',
   '室内系的trackmaker.m4a',
   '一笑江湖老生.m4a',
+  '成都.m4a'
 ];
 
 const audio = document.getElementById('audio');
