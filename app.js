@@ -1,7 +1,6 @@
 // 列表：请确保这些文件都与本页面位于同一目录，或按需修改路径
 const tracks = [
   'Friendship.m4a',
-  'myheartwillgoon.m4a',
   'Nijamena.m4a',
   'scarbor.m4a',
   'victory.m4a',
@@ -13,32 +12,30 @@ const tracks = [
   '堕.m4a',
   '壁上观.m4a',
   '夜空中最亮的星.m4a',
-  '大雨还在下.m4a',
-  '天下低音版.m4a',
   '天下煽情版.m4a',
   '星辰万里只有你.m4a',
   '晚风作酒.m4a',
-  '晚风作酒黄静美.m4a',
   '晴天.m4a',
   '樱花树下的约定.m4a',
   '生生世世爱.m4a',
   '红尘客栈.m4a',
   '起风了.m4a',
-  '踏雪.m4a',
   '违背的青春.m4a',
   '都江堰.m4a',
   '错位时空.m4a',
-  '难却.m4a',
   '风的使命.m4a',
   '起风了跑步版.m4a',
   '牵丝戏降调版.m4a',
-  '关山酒草帽酱.m4a',
   '一笑江湖煽情版.m4a',
   '室内系的trackmaker.m4a',
   '一笑江湖老生.m4a',
   '成都.m4a',
   '辞九门回忆.m4a',
-  '赤伶.m4a'
+  '赤伶.m4a',
+  'wenever.m4a',
+  'onceuponatime.m4a',
+  'soldout.m4a',
+  '天下.m4a'
 ];
 
 const audio = document.getElementById('audio');
